@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<details>
+    <person1>
+        <name>Alex</name>
+        <hobbies>cricket</hobbies>
+	<br/>
+    </person1>
+    <person2>
+        <name>Ben</name>
+        <hobbies>football</hobbies>
+    	<br/>
+    </person2>
+    <person3>
+        <name>Cas</name>
+        <hobbies>tennis</hobbies>
+	<br/>
+    </person3>
+    <person4>
+        <name>Daniel</name>
+        <hobbies>volleyball</hobbies>
+  	<br/>
+    </person4>
+    <person5>
+        <name>May</name>
+        <hobbies>Travelling</hobbies>
+        <br/>
+    </person5>
+    <person6>
+        <name>Neil</name>
+        <hobbies>gaming</hobbies>
+        <br/>
+    </person6>
+    <person7>
+        <name>Steve</name>
+        <hobbies>Cooking</hobbies>
+        <br/>
+    </person7>
+    <person8>
+        <name>Tara</name>
+        <hobbies>gaming</hobbies>
+        <br/>
+    </person8>
+    <person9>
+        <name>Hayley</name>
+        <hobbies>Listening to music</hobbies>
+        <br/>
+    </person9>
+    <person10>
+        <name>Kate</name>
+        <hobbies>volleyball</hobbies>
+        <br/>
+    </person10>
+</details>

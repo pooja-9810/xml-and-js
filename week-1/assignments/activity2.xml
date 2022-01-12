@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<record>
+		<Empno>1001</Empno>
+		<Empname>Alex</Empname>
+		<Salary>3000</Salary>
+	</record>
+	<record>
+		<Empno>1002</Empno>
+		<Empname>Sarah</Empname>
+		<Salary>4000</Salary>
+	</record>
+	<record>
+		<Empno>1003</Empno>
+		<Empname>Peter</Empname>
+		<Salary>3500</Salary>
+	</record>
+</table>

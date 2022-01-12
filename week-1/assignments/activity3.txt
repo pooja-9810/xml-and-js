@@ -1,0 +1,9 @@
+On dragging and dropping the xml files created in the last two activities, excel provides us with three ways in which
+we can open our xml files:
+ 1. As an XML table
+	-Since the XML source does not refer to a schema for activity 1 ,our xml file cannot be opened in Excel. Whereas 
+	 for activity 2 the table data is displayed in Excel.
+ 2. As a read-only workbook
+	-The XML files of activity 1 and 2 open in excel but their headings contain xml tag values with the backslash.
+ 3. Use the XML Source task pane
+	-The XML files do not open in excel because the XML source does not refer to a schema

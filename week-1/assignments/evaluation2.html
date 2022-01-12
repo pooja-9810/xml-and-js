@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="evaluation2.css" />
+    <title>Web Form</title>
+</head>
+<body>
+    <div class="form1">
+        <form>
+                <fieldset>
+                    <div class="block"><label for="email">Your E-Mail* :</label> <input type="email" id="text1" required/></div>
+                    <div class="block"><label for="date">Date Of Visit :</label><input type="text" id="text2" placeholder="mm/dd/yyy" /></div>
+                    Your Comment:<br />
+                    <textarea id="text3" rows="6" cols="40"></textarea><br />
+                    <input type="button" value="Send Your Feedback" id="btn" onclick="myWebForm()">
+                   <br />
+                </fieldset>
+            <script>
+                function myWebForm() {
+                   var  p1 = document.getElementById('text1').value;
+                   var  p2 = document.getElementById('text2').value;
+                   var  p3 = document.getElementById('text3').value;
+                   alert("Your Email: "+p1+"\nDate Of Visit:"+p2+"\nYour Comment: "+p3);
+                }
+            </script>
+    </div>
+</form>
+</body>
+</html>
