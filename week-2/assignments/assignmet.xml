@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/css" href="assignmet.css"?>
+<!DOCTYPE menuInfo
+[
+<!ELEMENT menuInfo (title,summary,effective,menu+)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT summary (#PCDATA)>
+<!ELEMENT effective (Date+)>
+<!ELEMENT menu (category,menuItem+)>
+<!ELEMENT Date (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT menuItem (itemName,description,price,indicator*)>
+<!ELEMENT itemName (originalName,oldName?)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT indicator (#PCDATA)>
+<!ELEMENT originalName (#PCDATA)>
+<!ELEMENT oldName (#PCDATA)>
+]>
 <menuInfo>
   <title>Chester's Breakfast Menu</title>
   <summary>
@@ -6,9 +24,8 @@
     If you've been craving an authentic homestyle country breakfast,
     look no further than Chester's!  We've got your breakfast favorites served
     up just the way you like them!!
-    ]]>
-  </summary>
-  <effective Date>03/12/2016</effective Date>
+    ]]></summary>
+  <effective><Date>03/12/2016</Date></effective>
   <menu>
     <category>Traditional Favorites</category>
     <menuItem>
@@ -80,3 +97,4 @@
     </menuItem>
   </menu>
 </menuInfo>
+<!--Pooja Patel   N01496379-->
