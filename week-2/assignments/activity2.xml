@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+
+<businesscard>
+
+<card>
+<person>Joe Marini</person>
+<list>
+<item>+1 (415) 555-1234 (home)</item>
+<item>+1 (800) 555-9867 (work)</item>
+<item>+1 (510) 555-1212 (mobile)</item>
+<item>joe@joe.com</item>
+</list>
+</card>
+
+<card>
+<person>Tom Grant</person>
+<list>
+<item>+1 (789) 555-1234 (home)</item>
+<item>+1 (787) 555-9557 (work)</item>
+<item>+1 (456) 555-1212 (mobile)</item>
+<item>tom@tom.com</item>
+</list>
+</card>
+
+<card>
+<person>Kate Harrow</person>
+<list>
+<item>+1 (566) 555-1255 (home)</item>
+<item>+1 (453) 555-9867 (work)</item>
+<item>+1 (234) 555-1552 (mobile)</item>
+<item> kate@kate.com</item>
+</list>
+</card>
+
+</businesscard>

@@ -1,0 +1,11 @@
+person {
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  * {
+    display:block;
+  }
+  item.a{
+    list-style: circle;
+  }
