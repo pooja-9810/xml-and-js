@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Information</title>
+    <script language="JavaScript">
+      function testResults(event) {
+        event.preventDefault();
+
+        const form = event.target;
+
+        const fname = form.fname.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        const location = form.loc.value;
+        const ratings=form.rating;
+    
+        let rating= "";
+				for (let i = 0; ratings[i];i++) {
+					if (ratings[i].checked) {
+						rating += ratings[i].value + " ";
+					}
+				}
+
+        console.log(`Name: ${fname}`);
+        console.log(`Email: ${email}`);
+        console.log(`Password: ${password}`);
+		console.log(`Location: ${location}`);
+        console.log(`Ratings: ${rating}`);
+        
+
+      }
+    </script>
+</head>
+<body>
+    <form onSubmit="return testResults(event)" action="" method="get">
+        <h1>Travel Information</h1>
+       <div class="account">
+        <fieldset>
+            <legend>Login Details</legend>
+            <div class="block"><label for="fname">Name :</label> <input type="text" name="fname" value=""/></div>
+            <div class="block"><label for="email">E-Mail :</label> <input type="text"name="email" value="" /></div>
+            <div class="block"><label for="password">Password :</label><input type="text"  name="password" value=""/></div>   
+        </fieldset>
+        <fieldset>
+        <legend>Select Location:</legend>
+            <label for="New York"></label><input type="radio" name="loc" value="New York">New York<br>
+            <label for="Paris"></label><input type="radio" name="loc" value="Paris">Paris<br>
+            <label for="Toronto"></label><input type="radio" name="loc" value ="Toronto">Toronto<br>
+         </fieldset>
+        <fieldset>
+        <legend>Hotel Ratings:</legend>
+            <label for="checkbox"></label><input type="checkbox" name="rating" value="3 Star">3 Star<br>
+            <label for="checkbox"></label><input type="checkbox" name="rating" value="4 Star">4 Star<br>
+            <label for="checkbox"></label><input type="checkbox" name="rating" value="5 Star">5 Star<br>
+        </fieldset>
+        <input type="submit" value="Submit" />  <br />
+    </form>
+    </div></div>
+</body>
+</html>
