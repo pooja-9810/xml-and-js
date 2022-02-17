@@ -12,7 +12,7 @@ const loadData = (path, callback) => {
       callback(target.responseXML);
     }
   };
-  xhttp.open("GET", path, true);
+  xhttp.open("GET", `http://localhost:8080/week-6/asignments/activity.xml`, true);
   xhttp.send();
 };
 
@@ -34,7 +34,7 @@ const generateTableRow = (item) => {
 };
 
 const renderTable = (xmlData) => {
-  const table = document.getElementById("student_table");
+  const table = document.getElementById("student-table");
 
   if (!table) {
     throw new Error("No table element found");
@@ -49,7 +49,7 @@ const renderTable = (xmlData) => {
   );
 };
 
-loadData(`http://localhost:8080/week-6/assignments/students.xml`, renderTable);
+loadData(`http://localhost:8080/activity.xml`, renderTable);
 const onReset = () => {
   window.location.replace(window.location.pathname);
 };

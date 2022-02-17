@@ -1,3 +1,4 @@
+
 # Activity
 
 - Create empty html table with following columns
