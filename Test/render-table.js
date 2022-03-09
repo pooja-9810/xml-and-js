@@ -12,44 +12,46 @@ const loadData = (path, callback) => {
       callback(target.responseXML);
     }
   };
-  xhttp.open("GET",path, true);
+  xhttp.open("GET", path, true);
   xhttp.send();
 };
 
 const generateTableRow = (item) => {
-  const rollno = item.attributes[0].textContent;
-  const firstname = Array.from(item.getElementsByTagName(`firstname`))[0];
-  const lastname = Array.from(item.getElementsByTagName(`lastname`))[0];
-  const nickname = Array.from(item.getElementsByTagName(`nickname`))[0];
-  const marks = Array.from(item.getElementsByTagName(`marks`))[0];
-  
+  const title = Array.from(item.getElementsByTagName(`title`))[0];
+  const language = title.attributes[0].textContent;
+  const authors = Array.from(item.getElementsByTagName(`author`)).map(
+    ({ textContent }) => textContent
+  );
+  const year = Array.from(item.getElementsByTagName(`year`))[0];
+  const price = Array.from(item.getElementsByTagName(`price`))[0];
 
   return `<tr>
-      <td>${rollno}</td>
-      <td>${firstname.textContent}</td>
-      <td>${lastname.textContent}</td>
-      <td>${nickname.textContent}</td>
-      <td>${marks.textContent}</td>
+    <td>${title.textContent}</td>
+    <td>${language}</td>
+    <td>${authors.join(`, `)}</td>
+    <td>${year.textContent}</td>
+    <td>$${price.textContent}</td>
   </tr>`;
 };
 
 const renderTable = (xmlData) => {
-  const table = document.getElementById("student-table");
+  const table = document.getElementById("table-main");
 
   if (!table) {
     throw new Error("No table element found");
   }
 
   const nodes = Array.from(xmlData.documentElement.childNodes).filter(
-    ({ nodeName }) => nodeName === `student`
+    ({ nodeName }) => nodeName === `book`
   );
 
-  nodes.map((studentNode) =>
-    table.appendChild(htmlToElement(generateTableRow(studentNode)))
+  nodes.map((bookNode) =>
+    table.appendChild(htmlToElement(generateTableRow(bookNode)))
   );
 };
 
-loadData(`./activity.xml`, renderTable);
+loadData(`http://localhost:8080/books.xml`, renderTable);
+
 const onReset = () => {
   window.location.replace(window.location.pathname);
 };

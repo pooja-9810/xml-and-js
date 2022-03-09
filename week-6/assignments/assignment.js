@@ -49,7 +49,7 @@ const renderTable = (xmlData) => {
 	);
 };
 
-loadData(`http://localhost:8080/people.xml`, renderTable);
+loadData(`./people.xml`, renderTable);
 
 const onReset = () => {
 	window.location.replace(window.location.pathname);

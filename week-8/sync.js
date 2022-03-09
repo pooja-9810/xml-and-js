@@ -1,4 +1,5 @@
 function inc(a) {
+  await setTimeout()
   return a + 1;
 }
 
