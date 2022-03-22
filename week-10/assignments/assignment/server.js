@@ -14,14 +14,14 @@ const parseURLParams = (value) => {
 const server = http.createServer(async (req, res) => {
   const [basePath, paramsString] = req.url.split("?");
 
-  if (basePath === "/api/products" && req.method === "GET") {
+  if (basePath === "/assignments/assignment/products" && req.method === "GET") {
     const params = parseURLParams(paramsString);
 
     const { data, code } = await product.getAll(params);
 
     res.writeHead(code, { "Content-Type": "application/json" });
     res.end(data);
-  } else if (basePath.match(/\/api\/products\/\w+/) && req.method === "GET") {
+  } else if (basePath.match(/\/assignments\/assignment\/products\/\w+/) && req.method === "GET") {
     const id = basePath.split("/")[3];
 
     const { data, code } = await product.getById(id);
@@ -30,7 +30,7 @@ const server = http.createServer(async (req, res) => {
     res.end(data);
   } else {
     res.writeHead(404, { "Content-Type": "application/json" });
-    res.end(JSON.stringify({ message: "Route Not Found" }));
+    res.end(JSON.stringify({ message: "Route not Found" }));
   }
 });
 
