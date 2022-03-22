@@ -1,0 +1,16 @@
+{
+  "name": "assignments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test":"echo\"error:no text specified\" &&  exit 1",
+    "dev": "nodemon server.js"
+  },
+  "author": "OleksiiKachan",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
