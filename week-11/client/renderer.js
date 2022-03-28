@@ -7,6 +7,7 @@ const loadData = (path) =>
       }
     };
     xhttp.open("GET", path, true);
+    xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
     xhttp.send();
   });
 
@@ -33,16 +34,22 @@ const renderTable = (data, nameTerm) => {
   tableBody.innerHTML = rows;
 };
 
-loadData(`./data.json`).then((data) => renderTable(data));
+loadData(`https://xml-and-js-seven.vercel.app/api/products`).then((data) =>
+  renderTable(data)
+);
 
 const onSubmit = (event) => {
   event.preventDefault();
 
   const term = event.target.name.value;
 
-  loadData(`./data.json`).then((data) => renderTable(data, term));
+  loadData(`https://xml-and-js-seven.vercel.app/api/products`).then((data) =>
+    renderTable(data, term)
+  );
 };
 
 const onReset = () => {
-  loadData(`./data.json`).then((data) => renderTable(data));
+  loadData(`https://xml-and-js-seven.vercel.app/api/products`).then((data) =>
+    renderTable(data)
+  );
 };
