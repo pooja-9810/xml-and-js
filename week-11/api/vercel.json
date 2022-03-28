@@ -6,18 +6,10 @@
       "use": "@vercel/node"
     }
   ],
-  "redirects": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "header",
-          "key": "access-control-allow-origin",
-          "value": "*"
-        }
-      ],
-      "destination": "/server.js",
-      "permanent": false
+      "src": "/(.*)",
+      "dest": "server.js"
     }
   ]
 }
