@@ -9,18 +9,8 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "server.js"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "access-control-allow-origin",
-          "value": "*"
-        }
-      ]
+      "dest": "server.js",
+      "headers": { "access-control-allow-origin": "*" }
     }
   ]
 }
