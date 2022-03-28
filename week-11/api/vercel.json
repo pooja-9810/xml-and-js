@@ -16,7 +16,7 @@
           "value": "*"
         }
       ],
-      "destination": "server.js",
+      "destination": "/server.js",
       "permanent": false
     }
   ]
