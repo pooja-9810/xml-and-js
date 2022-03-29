@@ -1,30 +1,23 @@
 const products = require("../data/products.json");
 
-const getAll = ({ id, first_name, last_name, email, gender,ip_address }) =>
+const getAll = ({ id, name, description, price }) =>
   new Promise((resolve) => {
     let result = Array.from(products);
 
     if (id) {
-      result = result.filter((item) => item.id === Number (id));
+      result = result.filter((item) => item.id === id);
     }
 
-    if (first_name) {
-      result = result.filter((item) => item.first_name === first_name);
+    if (name) {
+      result = result.filter((item) => item.name === name);
     }
 
-    if (last_name) {
-      result = result.filter((item) => item.last_name === last_name);
+    if (description) {
+      result = result.filter((item) => item.description === description);
     }
 
-    if (email) {
-      result = result.filter((item) => item.email === email);
-    }
-    if (gender) {
-      result = result.filter((item) => item.gender === gender);
-    }
-
-    if (ip_address) {
-      result = result.filter((item) => item.ip_address === Number(ip_address));
+    if (price) {
+      result = result.filter((item) => item.price === Number(price));
     }
 
     resolve({ code: 200, data: JSON.stringify(result) });
@@ -49,3 +42,13 @@ module.exports = {
   getById,
 };
 
+
+const checkArguments = (var1) => {
+	return new Promise((resolve, reject) => {
+		if (typeof var1 !== "undefined") {
+			resolve("Success!");
+		} else {
+			reject("Error! Function requires an argument!");
+		}
+	});
+};

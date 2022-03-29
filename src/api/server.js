@@ -13,7 +13,7 @@ const parseURLParams = (value) => {
 
 const server = http.createServer(async (req, res) => {
   const [basePath, paramsString] = req.url.split("?");
-
+  
   if (basePath === "/api/products" && req.method === "GET") {
     const params = parseURLParams(paramsString);
 
@@ -23,25 +23,19 @@ const server = http.createServer(async (req, res) => {
     res.end(data);
   } else if (basePath.match(/\/api\/products\/\w+/) && req.method === "GET") {
     const id = basePath.split("/")[3];
-
+    
     const { data, code } = await product.getById(id);
 
     res.writeHead(code, { "Content-Type": "application/json" });
     res.end(data);
   } else {
     res.writeHead(404, { "Content-Type": "application/json" });
-    res.end(JSON.stringify({ message: "Route Not Found" }));
+    res.end(JSON.stringify({ message: "Route N Found" }));
   }
 });
 
 const PORT = 8888;
 
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+server.listen(PORT, () => console.log(`Server running  port ${PORT}`));
 
 module.exports = server;
-
-
-
-
-
-
