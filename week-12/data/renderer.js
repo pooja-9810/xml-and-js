@@ -34,7 +34,7 @@ const renderTable = (data, nameTerm) => {
   tableBody.innerHTML = rows;
 };
 
-loadData(`https://xml-and-js-1-qfs5mkiev-pooja-9810.vercel.app/assignments/assignment/products`).then((data) =>
+loadData(`https://xml-and-js-seven.vercel.app/api/products`).then((data) =>
   renderTable(data)
 );
 
@@ -43,13 +43,13 @@ const onSubmit = (event) => {
 
   const term = event.target.name.value;
 
-  loadData(`https://xml-and-js-1-qfs5mkiev-pooja-9810.vercel.app/assignments/assignment/products`).then((data) =>
+  loadData(`https://xml-and-js-seven.vercel.app/api/products`).then((data) =>
     renderTable(data, term)
   );
 };
 
 const onReset = () => {
-  loadData(`https://xml-and-js-1-qfs5mkiev-pooja-9810.vercel.app/assignments/assignment/products`).then((data) =>
+  loadData(`https://xml-and-js-seven.vercel.app/api/products`).then((data) =>
     renderTable(data)
   );
 };
