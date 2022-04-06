@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Week 12</title>
+       
+    </head>
+    <body>
+        <form id="Student Details" >
+            <input type="text" name="input" id="input-value-term" placeholder="Enter value..."/>
+            <select name="filters" id="filter">
+                <option value="university">University</option>          
+            </select>
+             <label> University name :</label>
+            <select name="filters_university" id="filter_university">
+                <option value="All">All</option>             
+            </select>
+            <br/>
+        
+            <br/>
+            <input type="submit" value="Filter"/>
+            <input type="reset" value="Reset"/>
+        </form>
+        <table>
+            <thead>
+                <th>Student ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>University</th>
+                <th>Email Address</th>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+          <script type="text/javascript" src="./bundle.js"></script>
+    </body>
+</html>
