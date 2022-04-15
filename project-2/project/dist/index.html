@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movies Data</title>
+    <style>
+h1 {
+    text-align: center;
+    color: black;
+    font-weight: 14px;
+}
+td {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 20px;
+}
+th {
+    background-color: grey;
+    color: black;
+    height: 40px;
+    font-size: 22px;
+}
+tr {
+    height: 15px;
+}
+select {
+    width: 250px;
+    height: 22px;
+}
+button{
+    width: 10%;
+    height: 25px;
+    color:black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+    </style>
+  </head>
+  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <h1>Movies Information</h1>
+    <form onsubmit="onSubmit(event)" onreset="window.location.replace(window.location.pathname)">
+      <label class="movie_class">Enter Movie Title: </label>
+      <input type="text" name="movieTitle" id="input-name-term" placeholder="Search movie"/><br /><br />
+      <!--Checkbox for movie genre-->
+      <label class="movie_class">Select Genre: </label>
+      <div id="divGenre"></div><br/><br/>  
+
+      <!-- Dropdown for Release Year -->
+      <label class="movie_class">Select release year: </label>
+      <select name="releaseYear" id="releaseYear" placeholder="Enter Year"></select>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+      <!-- Dropdown for Language -->
+      <label class="movie_class">Select language: </label>
+      <select name="language" id="language"></select><br/><br/>
+
+      <!-- Radio button forRating -->
+      <label class="movie_class" id="lblRating" for="radioRating">Select Rating: </label>
+      <div id="divRating"></div><br /><br />
+      <!-- Submit and Reset buttons -->
+      <button type="submit">Apply filters</button>
+      <button type="reset" onclick="onReset()">Reset</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Movie Title</th>
+          <th>Movie Genre</th>
+          <th>Release Year</th>
+          <th>Budget</th>
+          <th>Language</th>
+          <th>Rating</th>
+          </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+    <script type="text/javascript" src="./bundle.js"></script>
+  </body>
+</html>
